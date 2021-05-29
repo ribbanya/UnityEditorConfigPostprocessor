@@ -1,6 +1,6 @@
 {
   "name": "com.cortiwins.editorconfig",
-  "version": "1.0.0",
+  "version": "1.0.0-ribbanya",
   "license": "MIT",
   "displayName": "EditorConfig Postprocessor",
   "description": "A script to include the .editorConfig in a Visual Studio Solution for a Unity project.",
