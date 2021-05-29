@@ -49,7 +49,7 @@ namespace CortiWins.EditorConfig
                 "Project(\"{" + GuidSolutionFolder + "}\") = \"Solution Items\", \"Solution Items\", " +
                 "\"{E4BD692B-F6AA-4911-BC0E-6BBC8A3F28A3}\"\r\n"+
                 "	ProjectSection(SolutionItems) = preProject\r\n" +
-                "		..\.editorconfig = ..\.editorconfig\r\n" +
+                "		..\\.editorconfig = ..\\.editorconfig\r\n" +
                 "	EndProjectSection\r\n" +
                 "EndProject\r\n" +
                 "Global";
