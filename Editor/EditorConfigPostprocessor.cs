@@ -47,9 +47,9 @@ namespace CortiWins.EditorConfig
         private const string ReplaceString =
                 "EndProject\r\n" +
                 "Project(\"{" + GuidSolutionFolder + "}\") = \"Solution Items\", \"Solution Items\", " +
-                "\"{B24FE069-BB5F-4F16-BCDA-61C28EABC46B}\"\r\n"+
+                "\"{E4BD692B-F6AA-4911-BC0E-6BBC8A3F28A3}\"\r\n"+
                 "	ProjectSection(SolutionItems) = preProject\r\n" +
-                "		.editorconfig = .editorconfig\r\n" +
+                "		..\.editorconfig = ..\.editorconfig\r\n" +
                 "	EndProjectSection\r\n" +
                 "EndProject\r\n" +
                 "Global";
