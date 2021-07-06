@@ -63,12 +63,9 @@ namespace CortiWins.EditorConfig
         public static string OnGeneratedSlnSolution(string path, string content)
         {
             // As the file is modified, not necessarily created, check if there already is an entry for SolutionItems. 
-            if (!content.Contains(GuidSolutionFolder))
-            {
-                content = content.Replace(FindString, ReplaceString);
-            }
-
-            return content;
+            return content.Contains(GuidSolutionFolder)
+                ? content
+                : content.Replace(FindString, ReplaceString);
         }
 
         /// <summary>
