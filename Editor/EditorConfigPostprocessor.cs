@@ -26,8 +26,7 @@ namespace CortiWins.EditorConfig
     /// Discussion why the old code no longer works: 
     /// https://forum.unity.com/threads/bug-unity-2020-1-enable_vstu-define-is-gone-and-projectfilegeneration-event-isnt-raised-anymore.942664/
     /// </summary>
-    public class EditorConfigPostprocessor
-        : AssetPostprocessor
+    public class EditorConfigPostprocessor : AssetPostprocessor
     {
         /// <summary>
         /// This term is exactly at the spot between project references and the global section.
