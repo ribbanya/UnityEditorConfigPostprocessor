@@ -14,12 +14,12 @@ namespace CortiWins.EditorConfig
     /// In Unity 2020 the old way of inserting the editorConfig-File into the visual studio solution file now longer works.
     /// This script will fill the gap.
     /// Requirements:
-    /// * Unity 2020 with, "Visual Studio Editor".Package in Projekt at least 2.0.5.
+    /// * Unity 2020 with, "Visual Studio Editor".Package in Project at least 2.0.5.
     /// * I use VS2019 16.8.1 with VisualStudioTools for Unity.
     /// 
     /// Source:
     /// https://github.com/CortiWins/UnityEditorConfigPostprocessor
-    /// How to cinfigure your editorConfig:
+    /// How to configure your editorConfig:
     /// https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference?view=vs-2017.
     /// Including .editorConfig the previous way
     /// https://github.com/zaikman/unity-editorconfig
@@ -56,14 +56,14 @@ namespace CortiWins.EditorConfig
             "Global";
 
         /// <summary>
-        /// Called when a solutionfile (*sln) is modified.
+        /// Called when a solution file (*.sln) is modified.
         /// </summary>
         /// <param name="path">Path to the SLN file.</param>
-        /// <param name="content">The content of the SLN file. In microsofts "xml without brackets" format.</param>
+        /// <param name="content">The content of the SLN file. In Microsoft's "xml without brackets" format.</param>
         /// <returns>The content used as the created or modified SLN file.</returns>
         public static string OnGeneratedSlnSolution(string path, string content)
         {
-            // As the file is modified, not neccesarily created, check if there already is an entry for SolutionItems. 
+            // As the file is modified, not necessarily created, check if there already is an entry for SolutionItems. 
             if (!content.Contains(GuidSolutionFolder))
             {
                 content = content.Replace(FindString, ReplaceString);
@@ -73,14 +73,11 @@ namespace CortiWins.EditorConfig
         }
 
         /// <summary>
-        /// Called when a projectfile (*.csproj) is modified.
+        /// Called when a project file (*.csproj) is modified.
         /// </summary>
         /// <param name="path">Path to the CSPROJ file.</param>
         /// <param name="content">The content of the file. Xml.</param>
-        /// <returns>The content used as the created or modified projectfile.</returns>
-        public static string OnGeneratedCSProject(string path, string content)
-        {
-            return content;
-        }
+        /// <returns>The content used as the created or modified project file.</returns>
+        public static string OnGeneratedCSProject(string path, string content) => content;
     }
 }
